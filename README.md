@@ -10,4 +10,4 @@ I noticed alot of people were having issues creating a command to ping a minecra
 5. them run node . or node index.js 
 6. profit, you should be all set!!
 # Issues
-if you have any issues or ideas tomake the template better feel free to drop a pr or issue!
+if you have any issues or ideas to make the template better feel free to drop a pr or issue!
