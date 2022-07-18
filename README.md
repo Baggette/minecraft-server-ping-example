@@ -1,0 +1,1 @@
+# minecraft-server-ping-example
