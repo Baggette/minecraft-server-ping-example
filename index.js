@@ -42,10 +42,19 @@ client.on('messageCreate', (message) => {
     message.channel.send({embeds: [embed]})// send the embed
     })
     
-    .catch((error) => console.error(error));
+    .catch((error) => {
+    console.log(error);// if the server was unable to be pinged or something else happened
+    const embed = new MessageEmbed()
+    .setColor("#808080")
+    .setTitle("example server status")
+    .setDescription(`The server was unable to be pinged or you mis-typed the info`)
+    .setTimestamp()
+    message.channel.send({embeds: [embed]})// send the embed
+    
+    });
 
 
 });
-client.login("1234567890abcdefghijk")//replace with your bot token
+client.login("1234567890abcdefghijk");//replace with your bot token
 //you may need to give the bot the privileged gateway intents
 //this was inspired by this gist https://gist.github.com/vegeta897/e3d2fcd4b661bd9d021c397e7505be05 (this is outdated, do not use it)
