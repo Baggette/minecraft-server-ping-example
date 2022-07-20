@@ -1,15 +1,23 @@
 {
   "name": "minecraft-server-ping-example",
-  "version": "1.0.4",
-  "description": "Template for a minecraft server ping cmd",
+  "version": "1.0.5",
+  "description": "Template for pinging minecraft servers",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baggette/minecraft-server-ping-example.git"
+  },
   "author": "Baggette",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Baggette/minecraft-server-ping-example/issues"
+  },
+  "homepage": "https://github.com/Baggette/minecraft-server-ping-example#readme",
   "dependencies": {
-    "discord.js": "^14.0.1",
-    "minecraft-server-util": "^5.3.0",
+    "discord.js": "^14.0.3",
+    "minecraft-server-util": "^5.3.0"
   }
 }
