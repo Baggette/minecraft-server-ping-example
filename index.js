@@ -25,20 +25,17 @@ client.on('messageCreate', (message) => {
     if(message.content.startsWith(prefix)){
           util.status(server_ip, server_port, options)
     .then((result) => {
-        
-        const string1 = JSON.stringify(result);// turn the object into a string
-        const string = JSON.parse(string1);// make the string parsable
         const embed = new EmbedBuilder()
     .setColor("#FF0000")
     .setTitle("example server status")
     .setDescription(`This will show the status and info about the minecraft server \n **Server ip:** ${server_ip} \n **Server port:** ${server_port}`)
     .addFields(
-        {name:"Server Version", value: `${string.version.name}`},
-        {name:"Server Protocol Version", value:`${string.version.protocol}`},
-        {name:"Players Online", value:`${string.players.online}`},
-        {name:"Max Players", value:`${string.players.max}`},
-        {name:"MOTD (May Not Display Accurately)", value:`${string.motd.clean}`},
-        {name:"Latency", value:`${string.roundTripLatency}`},
+        {name:"Server Version", value: `${result.version.name}`},
+        {name:"Server Protocol Version", value:`${result.version.protocol}`},
+        {name:"Players Online", value:`${result.players.online}`},
+        {name:"Max Players", value:`${result.players.max}`},
+        {name:"MOTD (May Not Display Accurately)", value:`${result.motd.clean}`},
+        {name:"Latency", value:`${result.roundTripLatency}`},
     )
     .setTimestamp()
     message.channel.send({embeds: [embed]})// send the embed
